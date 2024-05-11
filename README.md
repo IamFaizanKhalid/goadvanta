@@ -1,5 +1,9 @@
 # goadvanta
 
+[![GoDoc](https://godoc.org/github.com/IamFaizanKhalid/goadvanta?status.svg)](https://godoc.org/github.com/IamFaizanKhalid/goadvanta)
+[![Go Report Card](https://goreportcard.com/badge/github.com/IamFaizanKhalid/goadvanta)](https://goreportcard.com/report/github.com/IamFaizanKhalid/goadvanta)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/IamFaizanKhalid/goadvanta/blob/master/LICENSE)
+
 A Golang client for the [Advanta SMS API](https://www.advantasms.com/bulksms-api).
 
 Functionality includes:
