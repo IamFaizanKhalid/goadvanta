@@ -13,7 +13,7 @@ type getBalanceResponse struct {
 	PartnerID    string `json:"partner-id"`
 }
 
-func (c client) GetBalance() (string, error) {
+func (c Client) GetBalance() (string, error) {
 	req := getBalanceRequest{
 		Apikey:    c.apiKey,
 		PartnerID: c.partnerID,

@@ -26,15 +26,15 @@ type sendSmsResponse struct {
 	NetworkID       int    `json:"networkid"`
 }
 
-func (c client) SendSMS(phone, message string) (*MessageResponse, error) {
+func (c Client) SendSMS(phone, message string) (*MessageResponse, error) {
 	return c.sendSMS(phone, message, nil)
 }
 
-func (c client) SendSMSLater(phone, message string, at time.Time) (*MessageResponse, error) {
+func (c Client) SendSMSLater(phone, message string, at time.Time) (*MessageResponse, error) {
 	return c.sendSMS(phone, message, &at)
 }
 
-func (c client) sendSMS(phone, message string, schedule *time.Time) (*MessageResponse, error) {
+func (c Client) sendSMS(phone, message string, schedule *time.Time) (*MessageResponse, error) {
 	req := sendSmsRequest{
 		Apikey:    c.apiKey,
 		PartnerID: c.partnerID,

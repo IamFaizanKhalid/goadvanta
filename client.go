@@ -11,21 +11,21 @@ import (
 
 const baseUrl = "https://quicksms.advantasms.com/api/services"
 
-type client struct {
+type Client struct {
 	apiKey    string
 	partnerID string
 	shortCode string
 }
 
-func NewClient(apiKey, partnerID, shortCode string) *client {
-	return &client{
+func NewClient(apiKey, partnerID, shortCode string) *Client {
+	return &Client{
 		apiKey:    apiKey,
 		partnerID: partnerID,
 		shortCode: shortCode,
 	}
 }
 
-func (c client) request(method, path string, req interface{}, resp interface{}) error {
+func (c Client) request(method, path string, req interface{}, resp interface{}) error {
 	var buf io.Reader
 	if req != nil {
 		reqBody, err := json.Marshal(req)

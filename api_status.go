@@ -23,7 +23,7 @@ type deliveryStatusResponse struct {
 	DeliveryTime        string `json:"delivery-time"`
 }
 
-func (c client) GetDeliveryReport(messageID string) (*DeliveryStatusResponse, error) {
+func (c Client) GetDeliveryReport(messageID string) (*DeliveryStatusResponse, error) {
 	req := deliveryStatusRequest{
 		Apikey:    c.apiKey,
 		PartnerID: c.partnerID,

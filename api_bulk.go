@@ -34,7 +34,7 @@ type sendBulkSmsResponse struct {
 }
 
 // SendBulkSMS can now send up to 20 bulk messages in one single call
-func (c client) SendBulkSMS(messages []MessageRequest) ([]MessageResponse, error) {
+func (c Client) SendBulkSMS(messages []MessageRequest) ([]MessageResponse, error) {
 	if len(messages) > 20 {
 		return nil, errors.New("you can only send up to 20 messages at a time")
 	}
