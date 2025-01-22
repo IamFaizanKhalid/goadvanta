@@ -49,7 +49,7 @@ func (c Client) GetDeliveryReport(messageID string) (*DeliveryStatusResponse, er
 		MessageID:         resp.MessageID,
 		NetworkId:         resp.DeliveryNetworkId,
 		Status:            resp.DeliveryStatus,
-		Description:       resp.DeliveryDescription,
+		Description:       DeliveryDescription(resp.DeliveryDescription),
 		TurnAroundSeconds: tatDuration,
 		DeliveryTime:      deliveryTime,
 	}, nil
